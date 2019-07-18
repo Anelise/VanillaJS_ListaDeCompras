@@ -1,0 +1,103 @@
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Programa para gerenciar lista de compras">
+    <meta name="author" content="Anelise Schunk">
+    <link rel="icon" href="img/marketcar47.png">
+
+    <title>Lista De Compras</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style> 
+      .list-group-item:nth-child(odd) {background: #fff}
+      .list-group-item:nth-child(even) {background: #f8f9fa}
+    </style>
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="img/marketcar156.png" alt="" width="72" height="72">
+        <h2 class="text-info">Lista de Compras</h2>
+        <p class="lead">Enquanto eu reviso meu javascript, você faz sua lista de compras!</p>
+      </div>
+
+          
+        <div>
+          <form class="needs-validation" novalidate="">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="firstName">Nome Item</label>
+                <input type="text" class="form-control" id="firstName" required />
+                <div class="invalid-feedback">Valid first name is required.</div>
+              </div>
+              <div class="col-md-2">
+                <label for="quantidade">Quantidade </label>
+                <input type="text" class="form-control" id="qtd" required />
+                <div class="invalid-feedback">Valid last name is required.</div>
+              </div>
+              <div class="col-md-2">
+                <label for="unidade">Unidade</label>
+                <select class="custom-select d-block w-100" id="unidade" required />
+                  <option value="UN">UN</option>
+                  <option value="KG">KG</option>
+                  <option value="GR">GR</option>
+                </select>
+                <div class="invalid-feedback">Valid last name is required.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="obs">Observação</label>
+                <input type="text" class="form-control" id="obs" required />
+                <div class="invalid-feedback">Valid last name is required.</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-primary m-3 " type="submit">Continue to checkout</button>
+            </div>
+
+          </form>
+        </div>
+
+        <hr >
+        <div>
+          <h4 class="d-flex justify-content-between align-items-center">
+            <span class="text-muted">Itens adicionados</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+
+          
+          <ul class="list-group">
+
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$12</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$12</span>
+            </li>
+           
+          </ul>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2019 Anelise Schunk</p>
+      </footer>
+  
+
+    </div>  
+    <script src="js/model/Produto.js"></script>
+    <script src="js/model/ListaProdutos.js"></script>
+    <script src="js/helper/DateHelper.js"></script>
+
+</body></html>
