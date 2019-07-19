@@ -7,7 +7,7 @@ class ListaProdutosController{
 		this._inputValorUnitario= $('#vunitario');
 		this._inputObservacao = $('#obs');
 		this._listaProdutos = new  ListaProdutos();
-		this._listaProdutosView = new ListaProdutosView($('#listaProdutosView'));
+		this._listaProdutosView = new ListaProdutosView($('#listaProdutosView'), $('#contaLista'));
 		this._listaProdutosView.update(this._listaProdutos);
 	}
 
