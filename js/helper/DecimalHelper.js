@@ -8,6 +8,6 @@ class DecimalHelper{
 	}
 
 	static decimalParaTexto(numero){
-		return (""+ numero).replace('.',',');
+		return (""+ numero.toFixed(2)).replace('.',',');
 	}
 }

@@ -4,7 +4,7 @@ class DateHelper{
 	}
 
 	static dataParaTexto(data){
-		return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+		return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`;
 	}
 
 	static textoParaData(texto){

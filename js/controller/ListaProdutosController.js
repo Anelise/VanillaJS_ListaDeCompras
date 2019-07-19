@@ -9,12 +9,14 @@ class ListaProdutosController{
 		this._listaProdutos = new  ListaProdutos();
 		this._listaProdutosView = new ListaProdutosView($('#listaProdutosView'), $('#contaLista'));
 		this._listaProdutosView.update(this._listaProdutos);
+		this._mensagemView = new MensagemView($('#mensagemView'));
 	}
 
 	adiciona(evento){
 		evento.preventDefault();
 		this._listaProdutos.adiciona(this._criaProduto());
 		this._limpaFormulario();
+		this._mensagemView.update( new Mensagem("Item adicionado!") )
 		this._listaProdutosView.update(this._listaProdutos);
 	}
 
