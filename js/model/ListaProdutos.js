@@ -12,4 +12,9 @@ class ListaProdutos{
 	get produtos(){
 		return [].concat(this._produtos);
 	}
+
+	esvazia(){
+		this._produtos = [];
+		StorageHelper.esvazia();
+	}
 }

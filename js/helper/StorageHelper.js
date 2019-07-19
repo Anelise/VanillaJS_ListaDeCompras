@@ -19,4 +19,8 @@ class StorageHelper{
 
 		return produtos;
 	}
+
+	static esvazia(){
+		localStorage.removeItem("listaProdutos");
+	}
 }

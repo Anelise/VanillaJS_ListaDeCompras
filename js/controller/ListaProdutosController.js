@@ -16,7 +16,7 @@ class ListaProdutosController{
 		evento.preventDefault();
 		this._listaProdutos.adiciona(this._criaProduto());
 		this._limpaFormulario();
-		this._mensagemView.update( new Mensagem("Item adicionado!") )
+		this._mensagemView.update( new Mensagem("Item adicionado!") );
 		this._listaProdutosView.update(this._listaProdutos);
 	}
 
@@ -38,6 +38,14 @@ class ListaProdutosController{
 		this._inputValorUnitario.value = 0;
 		this._inputObservacao.value = '';
 		this._inputNome.focus();
+	}
+
+	limpaLista(event){
+		event.preventDefault();
+		this._listaProdutos.esvazia();
+		this._mensagemView.update( new Mensagem("Lista Vazia!") );
+		this._listaProdutosView.update(this._listaProdutos);
+
 	}
 
 }
