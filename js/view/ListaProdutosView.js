@@ -1,10 +1,11 @@
-class ListaProdutosView{
+class ListaProdutosView extends BaseView{
 	constructor(elementoTabela,elementoContador){
+		super();
 		this._elementoTabela = elementoTabela;
 		this._elementoContador = elementoContador;
 	}
 
-	_template(model){
+	template(model){
 		return `
 		<h4 class="d-flex justify-content-between align-items-center">
             <span class="text-muted">Itens adicionados</span>
@@ -21,7 +22,7 @@ class ListaProdutosView{
 	}
 
 	update(model){
-		this._elementoTabela.innerHTML = this._template(model);
+		this._elementoTabela.innerHTML = this.template(model);
 
 		let somaTotalLista = model.produtos.reduce(function(total,n){
 			return total 
