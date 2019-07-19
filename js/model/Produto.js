@@ -1,11 +1,12 @@
 class Produto{
 	
-	constructor(data, nome, quantidade, unidade, descricao){
+	constructor(data, nome, quantidade, unidade, valorUnitario, observacao){
 		this._data = new Date(data.getTime());
 		this._nome = nome;
 		this._quantidade = quantidade;
 		this._unidade = unidade;
-		this._descricao = descricao;
+		this._valorUnitario = valorUnitario;
+		this._observacao = observacao;
 
 		Object.freeze(this);
 	}
@@ -18,6 +19,8 @@ class Produto{
 
 	get unidade() { return this._unidade; }
 
-	get descricao() { return this._descricao; }
+	get valorUnitario() { return this._valorUnitario; }
+
+	get observacao() { return this._observacao; }
 
 }

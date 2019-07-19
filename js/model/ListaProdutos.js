@@ -1,11 +1,12 @@
 class ListaProdutos{
 
 	constructor(){
-		this._produtos = [];
+		this._produtos = StorageHelper.getListaProdutos();
 	}
 
 	adiciona(produto){
 		this._produtos.push(produto);
+		StorageHelper.setListaProdutos(this._produtos);
 	}
 
 	get produtos(){
