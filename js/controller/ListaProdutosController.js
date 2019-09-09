@@ -6,7 +6,7 @@ class ListaProdutosController{
 		this._inputUnidade = $('#unidade');
 		this._inputValorUnitario= $('#vunitario');
 		this._inputObservacao = $('#obs');
-		this._listaProdutos = new  ListaProdutos();
+		this._listaProdutos = ProxyFactory.create(new  ListaProdutos(),['adiciona','esvazia'],model=>this._listaProdutosView.update(model));
 		this._listaProdutosView = new ListaProdutosView($('#listaProdutosView'), $('#contaLista'));
 		this._listaProdutosView.update(this._listaProdutos);
 		this._mensagemView = new MensagemView($('#mensagemView'));
@@ -17,7 +17,7 @@ class ListaProdutosController{
 		this._listaProdutos.adiciona(this._criaProduto());
 		this._limpaFormulario();
 		this._mensagemView.update( new Mensagem("Item adicionado!") );
-		this._listaProdutosView.update(this._listaProdutos);
+
 	}
 
 	_criaProduto(){
@@ -44,7 +44,7 @@ class ListaProdutosController{
 		event.preventDefault();
 		this._listaProdutos.esvazia();
 		this._mensagemView.update( new Mensagem("Lista Vazia!") );
-		this._listaProdutosView.update(this._listaProdutos);
+
 
 	}
 
